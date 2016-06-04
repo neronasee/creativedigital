@@ -1,0 +1,67 @@
+.ba-works-slider {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	.slick-dots {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		@include breakpoint(medium down) {
+			display: none !important;
+		}
+
+		li {
+			display: inline-block;
+
+			button {
+				font-size: 0;
+				border: 2px solid #ebebeb;
+				height: 10px;
+				width: 10px;
+				background: transparent;
+				border-radius: 50%;
+				margin: 3px;
+				transition: background .3s;
+			}
+		}
+
+		.slick-active {
+			button {
+				background: #ebebeb;
+			}
+		}
+	}
+}
+
+.ba-works-slide {
+	outline: none;
+
+}
+
+
+
+.ba-works-prev,
+.ba-works-next {
+	display: none !important;
+
+	@include breakpoint (medium) {
+		display: block !important;
+		position: absolute;
+		cursor: pointer;
+		top: 250px;
+		height: 40px;
+		width: 30px;
+		fill:#fff;
+		transition: fill .3s;
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+}
+.ba-works-prev {
+	left: -250px;
+}
+.ba-works-next {
+	right: -250px;
+}

@@ -1,0 +1,318 @@
+body {
+	overflow-x:hidden;
+}
+.ba-section {
+	background-color: $secondary-color;
+	padding: 30px 0;
+	@include breakpoint(medium) {
+		padding: 124px 0;
+	}
+}
+.button {
+	border: 1px solid #7d7a7c;
+	font-style: italic;
+	transition: border-color .3s;
+	&:hover {
+		border-color: $primary-color;
+	}
+}
+blockquote {
+	font-style: italic;
+}
+cite:before {
+	content: '';
+}
+.ba-intro {
+	background: url(../img/intro_bg.jpg) 50% no-repeat;
+	background-size: cover;
+	position: relative;
+	color: #FFF;
+	padding-top: 35px;
+}
+.ba-logo {
+	position: relative;
+	&__icon {
+		height: 73px;
+		width: 55px;
+		fill: #f6f6f6;
+	}
+}
+.ba-menu-toggle {
+	margin-top: 20px;
+}
+.ba-main-menu {
+	position: relative;
+	text-transform: uppercase;
+	font: 600 24px/2.5 'Proxima Nova', sans-serif;
+	li {
+		a {
+			color: #FFF;
+			transition: color .3s;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}
+.ba-intro:before,
+.ba-about-img:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 0;
+	background: rgba(159,154,207,.5);
+}
+
+.ba-intro-text {
+	position: relative;
+	text-align: center;
+	padding: 50px 0;
+	@include breakpoint(medium) {
+		padding: 280px 0 500px;
+	}
+
+	&__info {
+		max-width: 660px;
+		margin: 0 auto;
+		font-size: 30px;
+		font-style: italic;
+
+	}
+	&__title {
+		text-transform: uppercase;
+		// max-width: 950px;
+		// margin: 0 auto;
+		font-size: 72px;
+		line-height: 1;
+	}
+}
+
+
+.ba-about-img {
+	position: relative;
+	img {
+		display: block;
+		// min-height: 100%;
+		width: 100%;
+	}
+	&__title {
+			padding-top: 100px;
+			display: inline-block;
+			background: url(../img/Icon-AboutUs.png) 50% 0 no-repeat;
+			font-size: 36px;
+			line-height: 47/36;
+			color: #FFF;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	&__overlay {
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		padding: 80px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+	}
+}
+
+.ba-about-text {
+	// padding-left: 95px;
+	padding-top: 60px;
+
+	&__button {
+		text-align: center;
+	}
+}
+
+.ba-services {
+	text-align: center;
+	padding-bottom: 0;
+
+	&__block {
+		.column {
+			&:nth-child(3n+1) {
+				background: #DBDBDB;
+			}
+
+		}
+	}
+
+	&__info {
+		position: relative;
+		z-index: 1;
+	}
+	&__item {
+		color: #665f60;
+		font-size: 18px;
+		padding: 85px 0;
+		font-style: italic;
+		p {
+			max-width: 210px;
+			margin: 0 auto;
+		}
+
+		&--big {
+			color: #fff;
+			padding-left: 30px;
+			padding-right: 30px;
+			background: url(../img/service_item.jpg) 50% no-repeat;
+			background-size: cover;
+			height: 100%;
+			position: relative;
+
+			&:after {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 0;
+				background: rgba(159,154,207,.3);
+			}
+		}
+	}
+	&__title {
+		font-size: 24px;
+		font-weight: 900;
+		padding-top: 85px;
+		font-family: 'PT Sans', sans-serif;
+
+		&--design {
+			background: url(../img/Icon-Graphic.png) 50% 0 no-repeat;
+		}
+		&--web {
+			background: url(../img/Icon-Web.png) 50% 0 no-repeat;
+		}
+		&--seo {
+			background: url(../img/Icon-SEO.png) 50% 0 no-repeat;
+		}
+		&--mobile {
+			background: url(../img/Icon-Mobile.png) 50% 0 no-repeat;
+		}
+
+		&--big {
+			font-size: 36px;
+			background: url(../img/Icon-Services.png) 50% 0 no-repeat;
+
+		}
+	}
+}
+.ba-services-flex {
+	@include breakpoint(medium) {
+		display: flex;
+	}
+}
+
+.ba-works {
+	background: url(../img/works_bg.jpg) 50% no-repeat;
+	background-size: cover;
+	text-align: center;
+	position: relative;
+	&__title {
+		color: #FFF;
+		padding-top: 90px;
+		background: url(../img/Icon-Works.png) 50% 0 no-repeat;
+		position: relative;
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 0;
+		background: rgba(159,154,207,.3);
+	}
+}
+
+.button--works {
+	position: relative;
+	color: #fff;
+	border-color: #FFF;
+	&:hover {
+		border-color: $primary-color;
+		color: #fff;
+	}
+}
+
+.ba-team {
+	text-align: center;
+	&__title {
+		padding-top: 90px;
+		color: #665f60;
+		background: url(../img/Icon-team.png) 50% 0 no-repeat;
+	}
+}
+
+.ba-map {
+	height: 900px;
+	position: relative;
+	z-index: 0;
+	&:before {
+		position: absolute;
+		content: "";
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		background: rgba(159,154,207,.5);
+	}
+}
+.ba-contact {
+	position: relative;
+
+}
+.ba-contact-content {
+	padding: 55px 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	&__title {
+		color: #FFF;
+		padding-top: 90px;
+		background: url(../img/marker.png) 50% 0 no-repeat;
+	}
+}
+.ba-contact-form {
+	@include breakpoint(medium) {
+		padding: 260px 125px 0;
+	}
+
+	&__field {
+		color: #fff;
+		padding: 25px 10px;
+		border-radius: 5px;
+		background: rgba(235,235,235,.5);
+		outline: none;
+		&:focus {
+			background: rgba(235,235,235,.6);
+			border: none;
+			outline: none;
+
+		}
+	}
+
+	&__button {
+		color: #fff;
+		padding: 0 35px;
+		line-height: 60px;
+		background: $primary-color;
+		border-bottom: 3px solid #8783b0;
+		transition: color .3s;
+		&:hover {
+			color: #000;
+		}
+	}
+}
+

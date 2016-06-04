@@ -1,0 +1,85 @@
+.ba-team-slider {
+
+}
+.ba-team-slide {
+	position: relative;
+	outline: none;
+	padding-top: 195px;
+
+
+	@include breakpoint (medium) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&__info {
+		background: #FFF;
+		padding-top: 160px;
+		padding-bottom: 20px;
+		position: relative;
+	}
+	img {
+		position: absolute;
+		top: -128px;
+		left: 50%;
+		margin-left: -130px;
+	}
+	&__title {
+		color: $primary-color;
+	}
+	p {
+		font-style: italic;
+	}
+}
+
+
+.ba-team-slide-social{
+	padding: 15px 0 10px;
+	margin: 0;
+	background-color: $primary-color;
+
+	&__item {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	&__link {
+		overflow: hidden;
+	}
+}
+
+.ba-team-slide-social-svg {
+	height: 37px;
+	width: 37px;
+	fill-rule: evenodd;
+	fill: #FFF;
+	outline: none;
+	transition: fill .3s;
+	&:hover {
+		fill: $secondary-color;
+	}
+}
+
+
+.ba-team-prev,
+.ba-team-next {
+
+	display: none !important;
+	@include breakpoint(medium) {
+		display: block !important;
+		position: absolute;
+		top: 145px;
+		height: 45px;
+		width: 35px;
+		fill:$medium-gray;
+		cursor: pointer;
+		transition: fill .3s;
+		&:hover {
+			fill: $primary-color;
+		}
+	}
+}
+.ba-team-prev {
+	left: -60px;
+}
+.ba-team-next {
+	right: -60px;
+}
